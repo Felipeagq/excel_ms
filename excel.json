@@ -1,5 +1,5 @@
 {
-    "name_document":"Excel_pruebaaa.xlsx",
+    "name_document":"Excel_prueba4.xlsx",
     "name_sheet":"Primera_pagina",
     "position_sheet":0,
     "orientation":"x",
@@ -8,13 +8,9 @@
       {"cuadro2":"base64"}
     ],
     "data":[
-      {"Felipe":["CC","1234095049","yea"]},
-      {"Duvan":["CC","ajfbkajdfbsd","yeahsdbfksbdf"]},
-      {"Camilo":["CC","12049","Utso"]},
-      {"Rodrigi":["CC","1234095asdasd049","yea","DevOPs"]},
-      {"Rodrigi":["CC","1234095asdasd049","yea","DevOPs"]},
-      {"Rodrigi":["CC","1234095asdasd049","yea","DevOPs"]},
-      {"Rodrigi":["CC","1234095asdasd049","yea","DevOPs"]},
-      {"Rodrigi":["CC","1234095asdasd049","yea","DevOPs"]}
+      {"Nombre":["Felipe","Camilo","Roman"]},
+      {"Edad":["22","69","15"]},
+      {"sexo":["mucho","poco","virgen"]}
+
     ]
   }
