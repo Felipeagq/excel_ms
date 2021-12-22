@@ -1,8 +1,8 @@
 {
-    "name_document":"Excel_prueba.xlsx",
+    "name_document":"Excel_pruebaaa.xlsx",
     "name_sheet":"Primera_pagina",
     "position_sheet":0,
-    "orientation":"y",
+    "orientation":"x",
     "images":[
       {"cuadro1":"base64"},
       {"cuadro2":"base64"}

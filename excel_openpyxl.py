@@ -13,26 +13,26 @@ with open('excel.json') as file:
 
 
 # Creamos el objeto de Excel
-wb = Workbook()
+wb = Workbook() #
 
 # verificamos que exista el documento de Excel
-wb = Workbook()
-wb.create_sheet(creation["name_sheet"],creation["position_sheet"])
-ws = wb[creation["name_sheet"]]
+wb = Workbook()#
+wb.create_sheet(creation["name_sheet"],creation["position_sheet"])#
+ws = wb[creation["name_sheet"]]#
 row = 1
 column = 1
 if creation["orientation"] == "y":
     print("llenado de forma vertical")
 for data in  creation["data"]:
     for values in data.values():
-        ws.cell(row=row,column=column,value=list(data.keys())[0])
+        ws.cell(row=row,column=column,value=list(data.keys())[0])#
         if creation["orientation"] == "y":
             row = row +1
         else:
             column = column + 1
         for value in values:
             print(value)
-            ws.cell(row=row,column=column,value=value)
+            ws.cell(row=row,column=column,value=value)#
             if creation["orientation"] == "y":
                 row = row + 1
             else:
