@@ -1,0 +1,16 @@
+{
+    "name_document":"Excel_prueba4.xlsx",
+    "name_sheet":"Primera_pagina",
+    "position_sheet":0,
+    "orientation":"x",
+    "images":[
+      {"cuadro1":"base64"},
+      {"cuadro2":"base64"}
+    ],
+    "data":[
+      {"Nombre":["Felipe","Camilo","Roman"]},
+      {"Edad":["22","69","15"]},
+      {"sexo":["mucho","poco","virgen"]}
+
+    ]
+  }
