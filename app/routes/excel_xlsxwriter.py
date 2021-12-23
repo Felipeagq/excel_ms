@@ -2,15 +2,16 @@
 import os 
 import xlsxwriter
 import json
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
-
-
-def main(resp):
+def excel_builder(resp,ruta):
 
     # Creamos el objeto de Excel
     name = resp["name_document"]
-    wb = xlsxwriter.Workbook(f"./app/static/{name}") 
+    wb = xlsxwriter.Workbook(f"{ruta}{name}") 
 
 
     f_cell = wb.add_format({
@@ -54,7 +55,7 @@ def main(resp):
 if __name__ == "__main__":
     file = open("excel.json",)
     dic = json.load(file)
-    main(dic)
+    excel_builder(dic)
 
 
 
