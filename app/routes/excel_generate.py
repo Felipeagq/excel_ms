@@ -1,4 +1,4 @@
-from flask import Flask,request
+from flask import Flask,request, jsonify
 import json
 from .excel_xlsxwriter import excel_builder
 from .link_generate import create_presigned_url
@@ -17,13 +17,23 @@ def excel_generate(app:Flask) -> None:
     @app.route("/excel/generate", methods=["POST"])
     def excel_generate():
         if request.method == "POST":
-            resp = request.get_json()
-            print(resp["name_document"])
-            excel_builder(resp,ruta)
-            project_name = resp["project_name"]
-            document_name = resp["name_document"]
-            upload_file_name = f"{folder}{project_name}/{document_name}"
-            response = create_presigned_url(bucket_name, upload_file_name)
-            file = ruta + resp["name_document"]
-            url_response = s3_uploader(response, file)
-        return  f"{url_response}{folder}{project_name}/{document_name}"
+            try:
+                resp = request.get_json()
+                print(resp["name_document"])
+                excel_builder(resp,ruta)
+                project_name = resp["project_name"]
+                document_name = resp["name_document"]
+                upload_file_name = f"{folder}{project_name}/{document_name}"
+                response = create_presigned_url(bucket_name, upload_file_name)
+                file = ruta + resp["name_document"]
+                url_response = s3_uploader(response, file)
+                return  f"{url_response}{folder}{project_name}/{document_name}"
+            except:
+                return jsonify({
+                    "msg":"bad",
+                    "data":"some mistake in json"
+                })
+        return jsonify({
+                    "msg":"bad",
+                    "data":"some mistake in HTTP action"
+                })
